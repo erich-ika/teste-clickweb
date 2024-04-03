@@ -5,6 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Pett Love</title>
         <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="namorando.css" />
+        <script defer src="namorando.js"></script>
 
         <!-- Font: Montserrat -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -47,69 +49,13 @@
                 alt="account"
             />
         </header>
-        <div class="header-color px-20 pb-40">
-            <div class="comofunciona">Como Funciona</div>
-            <h2>Encontre um love para o seu animal sem sair de casa.</h2>
-            <div class="button clickable">Comece agora!</div>
-        </div>
-        <main id="home" class="px-20 pt-40 mb-100">
-            <div class="div-home-fotos mb-40">
-                <div class="img-shadow mb-40">
-                    <img src="./assets/home/images/img1.jpg" />
-                </div>
-                <div class="img-text">
-                    <img class="mb-20" src="./assets/home/icons/icon1.svg" />
-                    <h2>Cadastre seu <b>animal</b></h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Donec egestas, erat et convallis gravida, nisl libero
-                        imperdiet dolor, et vestibulum tortor quam in nunc.
-                    </p>
-                </div>
-            </div>
-            <img
-                class="dotted-line mb-40 mobile-only"
-                src="./assets/line.svg"
-            />
-            <img
-                class="dotted-line mb-40 desktop-only"
-                src="./assets/line-desktop.svg"
-            />
-            <div class="div-home-fotos mb-40 flip">
-                <div class="img-shadow mb-40">
-                    <img src="./assets/home/images/img2.jpg" />
-                </div>
-                <div class="img-text">
-                    <img class="mb-20" src="./assets/home/icons/icon2.svg" />
-                    <h2><b>Procure</b> pretendentes</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Donec egestas, erat et convallis gravida, nisl libero
-                        imperdiet dolor, et vestibulum tortor quam in nunc.
-                    </p>
-                </div>
-            </div>
-            <img
-                class="dotted-line mb-40 mobile-only flip"
-                src="./assets/line.svg"
-            />
-            <img
-                class="dotted-line mb-40 desktop-only flip"
-                src="./assets/line-desktop.svg"
-            />
-            <div class="div-home-fotos mb-40">
-                <div class="img-shadow mb-40">
-                    <img src="./assets/home/images/img3.jpg" />
-                </div>
-                <div class="img-text">
-                    <img class="mb-20" src="./assets/home/icons/icon3.svg" />
-                    <h2>Marque um <b>encontro</b></h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Donec egestas, erat et convallis gravida, nisl libero
-                        imperdiet dolor, et vestibulum tortor quam in nunc.
-                    </p>
-                </div>
+        <main id="namorando">
+            <h2><b>Pets</b> namorando</h2>
+            <p>Duis aute irure dolor in reprehenderit in voluptate</p>
+            <div id="petsnamorando"></div>
+            <div id="carregar-mais" class="button" onclick="carregarmais()">
+                <span>Carregar mais antigos</span>
+                <span class="duringloading">• • •</span>
             </div>
         </main>
         <footer class="py-4 px-4">

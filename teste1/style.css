@@ -71,7 +71,7 @@ header {
     margin-bottom: 100px;
 }
 
-main {
+main#home {
     font-weight: 500;
     font-size: 14px;
     line-height: 21px;
@@ -114,6 +114,19 @@ h2 b {
     border-radius: 58px;
     width: 280px;
     margin: 0 auto;
+}
+
+.button:not(.loading) span.duringloading {
+    display: none;
+}
+
+.button.loading {
+    background: lightgray;
+    color: white;
+}
+
+.button.loading span:not(.duringloading) {
+    display: none;
 }
 
 img.flip {
@@ -250,7 +263,6 @@ footer h2 {
     .img-text p {
         font-size: 24px;
         line-height: 36px;
-        
     }
 
     .div-home-fotos {
@@ -258,7 +270,7 @@ footer h2 {
         flex-wrap: wrap;
     }
 
-    .div-home-fotos.flip>:first-child {
+    .div-home-fotos.flip > :first-child {
         order: 1;
     }
 
@@ -282,11 +294,11 @@ footer h2 {
         font-weight: 700;
         color: var(--yellow);
     }
-    
+
     footer a:hover {
         text-decoration: underline;
     }
-    
+
     #footer-desktop-links {
         max-width: 850px;
         display: flex;
@@ -300,7 +312,7 @@ footer h2 {
     #footer-desktop-links p b {
         font-weight: 700;
     }
-    
+
     #footer-desktop-links ul {
         list-style-type: none;
         margin: 0;

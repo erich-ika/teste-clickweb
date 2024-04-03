@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>Pett Love</title>
         <link rel="stylesheet" href="style.css" />
 
         <!-- Font: Montserrat -->
@@ -17,22 +17,34 @@
     <body>
         <header>
             <img
-                id="menu"
+                id="logo"
                 class="clickable"
+                src="./assets/Pett Love.svg"
+                alt="Pett Love"
+            />
+            <img
+                id="menu"
+                class="clickable mobile-only"
                 src="./assets/header/menu.svg"
                 alt="menu"
             />
             <img
                 id="account"
-                class="clickable"
+                class="clickable mobile-only"
                 src="./assets/header/account.svg"
                 alt="account"
             />
             <img
-                id="logo"
-                class="clickable"
-                src="./assets/Pett Love.svg"
-                alt="Pett Love"
+                id="menu"
+                class="clickable desktop-only"
+                src="./assets/header/menu-desktop.svg"
+                alt="menu"
+            />
+            <img
+                id="account"
+                class="clickable desktop-only"
+                src="./assets/header/account-desktop.svg"
+                alt="account"
             />
         </header>
         <div class="header-color px-20 pb-40">
@@ -101,34 +113,100 @@
             </div>
         </main>
         <footer class="py-4 px-4">
-            <h2>Receba nossas novidades</h2>
-            <div class="digite-email mb-40">
-                <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Digite seu e-mail"
+            <div class="desktop-only">
+                <img
+                    class="d-block pb-40 mb-40"
+                    src="./assets/Pett Love-completo.svg"
+                    alt="Pett Love - encontros para todos animais"
                 />
+                <div id="footer-desktop-links" class="mb-40">
+                    <ul>
+                        <li>
+                            <a href="#">Sobre nós</a>
+                        </li>
+                        <li>
+                            <a href="#">Como funciona</a>
+                        </li>
+                        <li>
+                            <a href="#">Dúvidas frequentes</a>
+                        </li>
+                        <li>
+                            <a href="#">Blog</a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="#">Pets namorando</a>
+                        </li>
+                        <li>
+                            <a href="#">Comece agora!</a>
+                        </li>
+                        <li>
+                            <a href="#">Contato</a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="#"><b>Ajude uma entidade</b></a>
+                        </li>
+                        <li>
+                            <p>
+                                <b>SOS Vida Animal</b>
+                                <br />
+                                Banco Itaú: Ag <b>8804</b> Conta <b>01234-5</b>
+                                <br />
+                                PIX: <b>43.660.696/0001-95</b>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div id="footer-desktop-links-legal">
+                    <a href="#">Política de privacidade</a>
+                    <a href="#">Termos de uso</a>
+                    <a href="#">Política de Cookies</a>
+                    <a href="#">Política de cancelamento</a>
+                </div>
             </div>
-            <div class="social-container mb-40">
-                <div class="social-elipse clickable left">
-                    <img src="./assets/footer/facebook.svg" alt="facebook" />
+            <div id="footer-contato">
+                <h2>Receba nossas novidades</h2>
+                <div class="digite-email mb-40">
+                    <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Digite seu e-mail"
+                    />
                 </div>
-                <div class="social-elipse clickable">
-                    <img src="./assets/footer/instagram.svg" alt="instagram" />
+                <div class="social-container mb-40">
+                    <div class="social-elipse clickable left">
+                        <img
+                            src="./assets/footer/facebook.svg"
+                            alt="facebook"
+                        />
+                    </div>
+                    <div class="social-elipse clickable">
+                        <img
+                            src="./assets/footer/instagram.svg"
+                            alt="instagram"
+                        />
+                    </div>
+                    <div class="social-elipse clickable rigth">
+                        <img src="./assets/footer/youtube.svg" alt="youtube" />
+                    </div>
                 </div>
-                <div class="social-elipse clickable rigth">
-                    <img src="./assets/footer/youtube.svg" alt="youtube" />
-                </div>
+                <p class="mobile-only">
+                    Pett Love - Relacionamento
+                    <br />
+                    CNPJ: 43.660.696/0001-95
+                </p>
+                <i class="mobile-only">clickweb</i>
             </div>
-            <p>
-                Pett Love - Relacionamento
-                <br />
-                CNPJ: 43.660.696/0001-95
-            </p>
-            <i>clickweb</i>
         </footer>
         <div class="seta-topo clickable" onclick="window.scrollTo(0,0)">
+            <span class="left desktop-only"
+                >Pett Love - Relacionamento | CNPJ: 43.660.696/0001-95</span
+            >
             <img src="./assets/topo.svg" alt="topo" />
+            <i class="right desktop-only">clickweb</i>
         </div>
     </body>
 </html>

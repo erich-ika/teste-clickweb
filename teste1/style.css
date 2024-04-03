@@ -20,14 +20,14 @@ header {
     position: absolute;
     top: 48px;
     left: 20px;
-    width: 60px;
+    height: 60px;
 }
 
 #account {
     position: absolute;
     top: 48px;
     right: 20px;
-    width: 60px;
+    height: 60px;
 }
 
 #logo {
@@ -135,7 +135,6 @@ footer h2 {
 
 .seta-topo {
     height: 90px;
-    text-align: center;
     background: var(--green-shade);
     display: flex;
     justify-content: center;
@@ -194,6 +193,10 @@ footer h2 {
     flex-direction: column;
 }
 
+.d-block {
+    display: block;
+}
+
 @media (min-width: 961px) {
     .desktop-only {
         display: unset;
@@ -224,6 +227,10 @@ footer h2 {
         padding-top: 100px;
     }
 
+    h2 {
+        font-size: 36px;
+    }
+
     main {
         max-width: 1200px;
         margin-left: auto;
@@ -235,16 +242,108 @@ footer h2 {
     }
 
     .img-text {
+        max-width: 580px;
         text-align: left;
-        padding: 50px;
+        padding: 0 50px;
+    }
+
+    .img-text p {
+        font-size: 24px;
+        line-height: 36px;
+        
     }
 
     .div-home-fotos {
         flex-direction: row;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
     }
 
     .div-home-fotos.flip>:first-child {
         order: 1;
+    }
+
+    footer {
+        text-align: left;
+        font-size: 14px;
+        padding: 100px 80px 40px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #footer-desktop-links a {
+        color: white;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    #footer-desktop-links a b {
+        font-weight: 700;
+        color: var(--yellow);
+    }
+    
+    footer a:hover {
+        text-decoration: underline;
+    }
+    
+    #footer-desktop-links {
+        max-width: 850px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #footer-desktop-links p {
+        font-weight: 400;
+    }
+
+    #footer-desktop-links p b {
+        font-weight: 700;
+    }
+    
+    #footer-desktop-links ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    #footer-desktop-links ul li {
+        margin-bottom: 14px;
+    }
+
+    #footer-desktop-links-legal a {
+        color: white;
+        text-decoration: none;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    #footer-desktop-links-legal a:not(:last-child):after {
+        content: "•";
+        margin: 0 16px;
+    }
+
+    #footer-contato {
+        width: 400px;
+    }
+
+    #footer-contato h2 {
+        font-size: 18px;
+    }
+
+    .seta-topo {
+        color: white;
+        font-weight: 700;
+    }
+
+    .seta-topo .left {
+        position: absolute;
+        left: 80px;
+    }
+
+    .seta-topo .right {
+        position: absolute;
+        right: 80px;
     }
 }

@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\NoticiasController;
+use App\Http\Controllers\FilmeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,7 +14,12 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/test', function() {
+    return File::get(public_path() . '/teste1/index.html');
 });
+
+Route::get('/noticias', [NoticiasController::class, 'index']);
+Route::get('/noticias/{id}', [NoticiasController::class, 'noticia'])->name('noticia');
+
+Route::get('/filmes', [FilmeController::class, 'filmes1'])->name('filmeshome');
+Route::get('/filmes/{id}', [FilmeController::class, 'filmes'])->name('filmes');

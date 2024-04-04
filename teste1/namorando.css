@@ -7,18 +7,18 @@ main#namorando {
     margin-bottom: 50px;
 }
 
-.casal img.pfp {
+.casalpfp img.pfp {
     border-radius: 50%;
     display: block;
     width: 50%;
 }
 
-.casal {
+.casalpfp {
     position: relative;
     display: flex;
 }
 
-.casal .heart {
+.casalpfp .heart {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -47,4 +47,10 @@ h3 {
     line-height: 21px;
     color: #9a9a9a;
     margin-bottom: 50px;
+}
+
+@media (min-width: 961px) {
+    .casal {
+        width: 380px;
+    }
 }

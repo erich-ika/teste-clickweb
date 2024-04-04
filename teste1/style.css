@@ -210,6 +210,10 @@ footer h2 {
     display: block;
 }
 
+.animate {
+    transition: all 1s ease-in;
+}
+
 @media (min-width: 961px) {
     .desktop-only {
         display: unset;

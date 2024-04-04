@@ -13,200 +13,242 @@
             href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
             rel="stylesheet"
         />
+
+        <!-- HTMX -->
+        <script
+            src="https://unpkg.com/htmx.org@1.9.11"
+            integrity="sha384-0gxUXCCR8yv9FM2b+U3FDbsKthCI66oH5IA9fHppQq9DDMHuMauqq1ZHBpJxQ0J0"
+            crossorigin="anonymous"
+        ></script>
     </head>
     <body>
-        <header>
-            <img
-                id="logo"
-                class="clickable"
-                src="./assets/Pett Love.svg"
-                alt="Pett Love"
-            />
-            <img
-                id="menu"
-                class="clickable mobile-only"
-                src="./assets/header/menu.svg"
-                alt="menu"
-            />
-            <img
-                id="account"
-                class="clickable mobile-only"
-                src="./assets/header/account.svg"
-                alt="account"
-            />
-            <img
-                id="menu"
-                class="clickable desktop-only"
-                src="./assets/header/menu-desktop.svg"
-                alt="menu"
-            />
-            <img
-                id="account"
-                class="clickable desktop-only"
-                src="./assets/header/account-desktop.svg"
-                alt="account"
-            />
-        </header>
-        <div class="header-color px-20 pb-40">
-            <div class="comofunciona">Como Funciona</div>
-            <h2>Encontre um love para o seu animal sem sair de casa.</h2>
-            <div class="button clickable">Comece agora!</div>
-        </div>
-        <main id="home" class="px-20 pt-40 mb-100">
-            <div class="div-home-fotos mb-40">
-                <div class="img-shadow mb-40">
-                    <img src="./assets/home/images/img1.jpg" />
-                </div>
-                <div class="img-text">
-                    <img class="mb-20" src="./assets/home/icons/icon1.svg" />
-                    <h2>Cadastre seu <b>animal</b></h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Donec egestas, erat et convallis gravida, nisl libero
-                        imperdiet dolor, et vestibulum tortor quam in nunc.
-                    </p>
-                </div>
-            </div>
-            <img
-                class="dotted-line mb-40 mobile-only"
-                src="./assets/line.svg"
-            />
-            <img
-                class="dotted-line mb-40 desktop-only"
-                src="./assets/line-desktop.svg"
-            />
-            <div class="div-home-fotos mb-40 flip">
-                <div class="img-shadow mb-40">
-                    <img src="./assets/home/images/img2.jpg" />
-                </div>
-                <div class="img-text">
-                    <img class="mb-20" src="./assets/home/icons/icon2.svg" />
-                    <h2><b>Procure</b> pretendentes</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Donec egestas, erat et convallis gravida, nisl libero
-                        imperdiet dolor, et vestibulum tortor quam in nunc.
-                    </p>
-                </div>
-            </div>
-            <img
-                class="dotted-line mb-40 mobile-only flip"
-                src="./assets/line.svg"
-            />
-            <img
-                class="dotted-line mb-40 desktop-only flip"
-                src="./assets/line-desktop.svg"
-            />
-            <div class="div-home-fotos mb-40">
-                <div class="img-shadow mb-40">
-                    <img src="./assets/home/images/img3.jpg" />
-                </div>
-                <div class="img-text">
-                    <img class="mb-20" src="./assets/home/icons/icon3.svg" />
-                    <h2>Marque um <b>encontro</b></h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Donec egestas, erat et convallis gravida, nisl libero
-                        imperdiet dolor, et vestibulum tortor quam in nunc.
-                    </p>
-                </div>
-            </div>
-        </main>
-        <footer class="py-4 px-4">
-            <div class="desktop-only">
-                <img
-                    class="d-block pb-40 mb-40"
-                    src="./assets/Pett Love-completo.svg"
-                    alt="Pett Love - encontros para todos animais"
-                />
-                <div id="footer-desktop-links" class="mb-40">
-                    <ul>
-                        <li>
-                            <a href="#">Sobre nós</a>
-                        </li>
-                        <li>
-                            <a href="#">Como funciona</a>
-                        </li>
-                        <li>
-                            <a href="#">Dúvidas frequentes</a>
-                        </li>
-                        <li>
-                            <a href="#">Blog</a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li>
-                            <a href="#">Pets namorando</a>
-                        </li>
-                        <li>
-                            <a href="#">Comece agora!</a>
-                        </li>
-                        <li>
-                            <a href="#">Contato</a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li>
-                            <a href="#"><b>Ajude uma entidade</b></a>
-                        </li>
-                        <li>
-                            <p>
-                                <b>SOS Vida Animal</b>
-                                <br />
-                                Banco Itaú: Ag <b>8804</b> Conta <b>01234-5</b>
-                                <br />
-                                PIX: <b>43.660.696/0001-95</b>
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-                <div id="footer-desktop-links-legal">
-                    <a href="#">Política de privacidade</a>
-                    <a href="#">Termos de uso</a>
-                    <a href="#">Política de Cookies</a>
-                    <a href="#">Política de cancelamento</a>
-                </div>
-            </div>
-            <div id="footer-contato">
-                <h2>Receba nossas novidades</h2>
-                <div class="digite-email mb-40">
-                    <input
-                        type="text"
-                        class="form-control"
-                        placeholder="Digite seu e-mail"
+        <div>
+            <div id="body" class="animate">
+                <header>
+                    <img
+                        id="logo"
+                        class="clickable"
+                        src="./assets/Pett Love.svg"
+                        alt="Pett Love"
                     />
+                    <img
+                        id="menu"
+                        class="clickable mobile-only"
+                        src="./assets/header/menu.svg"
+                        alt="menu"
+                    />
+                    <img
+                        id="account"
+                        class="clickable mobile-only"
+                        src="./assets/header/account.svg"
+                        alt="account"
+                    />
+                    <img
+                        id="menu"
+                        class="clickable desktop-only"
+                        src="./assets/header/menu-desktop.svg"
+                        alt="menu"
+                    />
+                    <img
+                        id="account"
+                        class="clickable desktop-only"
+                        src="./assets/header/account-desktop.svg"
+                        alt="account"
+                    />
+                </header>
+                <div class="header-color px-20 pb-40">
+                    <div class="comofunciona">Como Funciona</div>
+                    <h2>
+                        Encontre um love para o seu animal sem sair de casa.
+                    </h2>
+                    <div
+                        class="button clickable"
+                        hx-get="./namorando.html"
+                        hx-target="#body"
+                        hx-swap="outerHTML"
+                    >
+                        Comece agora!
+                    </div>
                 </div>
-                <div class="social-container mb-40">
-                    <div class="social-elipse clickable left">
+                <main id="home" class="px-20 pt-40 mb-100">
+                    <div class="div-home-fotos mb-40">
+                        <div class="img-shadow mb-40">
+                            <img src="./assets/home/images/img1.jpg" />
+                        </div>
+                        <div class="img-text">
+                            <img
+                                class="mb-20"
+                                src="./assets/home/icons/icon1.svg"
+                            />
+                            <h2>Cadastre seu <b>animal</b></h2>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit. Donec egestas, erat et
+                                convallis gravida, nisl libero imperdiet dolor,
+                                et vestibulum tortor quam in nunc.
+                            </p>
+                        </div>
+                    </div>
+                    <img
+                        class="dotted-line mb-40 mobile-only"
+                        src="./assets/line.svg"
+                    />
+                    <img
+                        class="dotted-line mb-40 desktop-only"
+                        src="./assets/line-desktop.svg"
+                    />
+                    <div class="div-home-fotos mb-40 flip">
+                        <div class="img-shadow mb-40">
+                            <img src="./assets/home/images/img2.jpg" />
+                        </div>
+                        <div class="img-text">
+                            <img
+                                class="mb-20"
+                                src="./assets/home/icons/icon2.svg"
+                            />
+                            <h2><b>Procure</b> pretendentes</h2>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit. Donec egestas, erat et
+                                convallis gravida, nisl libero imperdiet dolor,
+                                et vestibulum tortor quam in nunc.
+                            </p>
+                        </div>
+                    </div>
+                    <img
+                        class="dotted-line mb-40 mobile-only flip"
+                        src="./assets/line.svg"
+                    />
+                    <img
+                        class="dotted-line mb-40 desktop-only flip"
+                        src="./assets/line-desktop.svg"
+                    />
+                    <div class="div-home-fotos mb-40">
+                        <div class="img-shadow mb-40">
+                            <img src="./assets/home/images/img3.jpg" />
+                        </div>
+                        <div class="img-text">
+                            <img
+                                class="mb-20"
+                                src="./assets/home/icons/icon3.svg"
+                            />
+                            <h2>Marque um <b>encontro</b></h2>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit. Donec egestas, erat et
+                                convallis gravida, nisl libero imperdiet dolor,
+                                et vestibulum tortor quam in nunc.
+                            </p>
+                        </div>
+                    </div>
+                </main>
+                <footer class="py-4 px-4">
+                    <div class="desktop-only">
                         <img
-                            src="./assets/footer/facebook.svg"
-                            alt="facebook"
+                            class="d-block pb-40 mb-40"
+                            src="./assets/Pett Love-completo.svg"
+                            alt="Pett Love - encontros para todos animais"
                         />
+                        <div id="footer-desktop-links" class="mb-40">
+                            <ul>
+                                <li>
+                                    <a href="#">Sobre nós</a>
+                                </li>
+                                <li>
+                                    <a href="#">Como funciona</a>
+                                </li>
+                                <li>
+                                    <a href="#">Dúvidas frequentes</a>
+                                </li>
+                                <li>
+                                    <a href="#">Blog</a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <a href="#">Pets namorando</a>
+                                </li>
+                                <li>
+                                    <a href="#">Comece agora!</a>
+                                </li>
+                                <li>
+                                    <a href="#">Contato</a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <a href="#"><b>Ajude uma entidade</b></a>
+                                </li>
+                                <li>
+                                    <p>
+                                        <b>SOS Vida Animal</b>
+                                        <br />
+                                        Banco Itaú: Ag <b>8804</b> Conta
+                                        <b>01234-5</b>
+                                        <br />
+                                        PIX: <b>43.660.696/0001-95</b>
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="footer-desktop-links-legal">
+                            <a href="#">Política de privacidade</a>
+                            <a href="#">Termos de uso</a>
+                            <a href="#">Política de Cookies</a>
+                            <a href="#">Política de cancelamento</a>
+                        </div>
                     </div>
-                    <div class="social-elipse clickable">
-                        <img
-                            src="./assets/footer/instagram.svg"
-                            alt="instagram"
-                        />
+                    <div id="footer-contato">
+                        <h2>Receba nossas novidades</h2>
+                        <div class="digite-email mb-40">
+                            <input
+                                type="text"
+                                class="form-control"
+                                placeholder="Digite seu e-mail"
+                            />
+                        </div>
+                        <div class="social-container mb-40">
+                            <div class="social-elipse clickable left">
+                                <img
+                                    src="./assets/footer/facebook.svg"
+                                    alt="facebook"
+                                />
+                            </div>
+                            <div class="social-elipse clickable">
+                                <img
+                                    src="./assets/footer/instagram.svg"
+                                    alt="instagram"
+                                />
+                            </div>
+                            <div class="social-elipse clickable rigth">
+                                <img
+                                    src="./assets/footer/youtube.svg"
+                                    alt="youtube"
+                                />
+                            </div>
+                        </div>
+                        <p class="mobile-only">
+                            Pett Love - Relacionamento
+                            <br />
+                            CNPJ: 43.660.696/0001-95
+                        </p>
+                        <i class="mobile-only">clickweb</i>
                     </div>
-                    <div class="social-elipse clickable rigth">
-                        <img src="./assets/footer/youtube.svg" alt="youtube" />
-                    </div>
+                </footer>
+                <div class="seta-topo clickable" onclick="window.scrollTo(0,0)">
+                    <span class="left desktop-only"
+                        >Pett Love - Relacionamento | CNPJ:
+                        43.660.696/0001-95</span
+                    >
+                    <img src="./assets/topo.svg" alt="topo" />
+                    <i class="right desktop-only">clickweb</i>
                 </div>
-                <p class="mobile-only">
-                    Pett Love - Relacionamento
-                    <br />
-                    CNPJ: 43.660.696/0001-95
-                </p>
-                <i class="mobile-only">clickweb</i>
             </div>
-        </footer>
-        <div class="seta-topo clickable" onclick="window.scrollTo(0,0)">
-            <span class="left desktop-only"
-                >Pett Love - Relacionamento | CNPJ: 43.660.696/0001-95</span
-            >
-            <img src="./assets/topo.svg" alt="topo" />
-            <i class="right desktop-only">clickweb</i>
         </div>
     </body>
 </html>
+<style>
+    .smooth {
+        transition: all 1s ease-in;
+    }
+</style>

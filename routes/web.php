@@ -14,6 +14,11 @@ use App\Http\Controllers\FilmeController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('/test', function() {
+    return view('welcome');
+});
+
 Route::get('/test', function() {
     return File::get(public_path() . '/teste1/index.html');
 });

@@ -15,7 +15,7 @@ use App\Http\Controllers\FilmeController;
 |
 */
 
-Route::get('/test', function() {
+Route::get('/', function() {
     return view('welcome');
 });
 
@@ -26,5 +26,5 @@ Route::get('/test', function() {
 Route::get('/noticias', [NoticiasController::class, 'index']);
 Route::get('/noticias/{id}', [NoticiasController::class, 'noticia'])->name('noticia');
 
-Route::get('/filmes', [FilmeController::class, 'filmes1'])->name('filmeshome');
+Route::get('/filmes', [FilmeController::class, 'filmeshome'])->name('filmeshome');
 Route::get('/filmes/{id}', [FilmeController::class, 'filmes'])->name('filmes');

@@ -17,9 +17,9 @@
         @if (isset($result['primaryImage']) && isset($result['primaryImage']['url']))
             <img class="imagemfilme" src="{{ $result['primaryImage']['url'] }}">
         @else
-            <img class="imagemfilme" src="./kiwi.png">
+            <img class="imagemfilme" src="/filmesassets/kiwi.png">
         @endif
-        <h2>{{ $result['titleText']['text'] }}</h2>
+        <h2>{{ $result['titleText']['text'] }} ({{ $result['releaseYear']['year'] }})</h2>
     @endforeach
     <a href="{{ route('filmes', $page+1) }}">Next >></a>
 </body>

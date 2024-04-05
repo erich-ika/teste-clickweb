@@ -1,5 +1,5 @@
 function buscar(cb) {
-    // TODO simula buscar 12 casais do banco de dados, demorando 2 segundos
+    // TODO simula buscar 12 casais do banco de dados, demorando meio segundo
     setTimeout(() => {
         const mockCasais = [
             [
@@ -87,14 +87,14 @@ function render(casais) {
         casal.forEach((pet) => {
             let imgpfp = document.createElement("img");
             imgpfp.className = "pfp";
-            imgpfp.src = `./assets/namorando/pfp/${pet.id}.png`;
+            imgpfp.src = `/pettlove/assets/namorando/pfp/${pet.id}.png`;
             imgpfp.alt = pet.name;
             divcasalpfp.appendChild(imgpfp);
         });
 
         let imgheart = document.createElement("img");
         imgheart.classList = "heart";
-        imgheart.src = "./assets/namorando/heart.svg";
+        imgheart.src = "/pettlove/assets/namorando/heart.svg";
         divcasalpfp.appendChild(imgheart);
 
         divcasal.appendChild(divcasalpfp);

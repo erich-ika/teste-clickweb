@@ -74,13 +74,6 @@ function render(casais) {
         divcasal = document.createElement("div");
         divcasal.classList = "casal";
 
-        if (i % 6 == 0) {
-            let divpublicidade = document.createElement("div");
-            divpublicidade.classList = "publicidade";
-            divpublicidade.innerText = "Publicidade 315x80";
-            divcasal.appendChild(divpublicidade);
-        }
-
         let divcasalpfp = document.createElement("div");
         divcasalpfp.className = "casalpfp";
 
@@ -104,6 +97,13 @@ function render(casais) {
         divcasal.appendChild(h3casalname);
 
         divpetsnamorando.appendChild(divcasal)
+
+        if (i % 6 == 5) {
+            let divpublicidade = document.createElement("div");
+            divpublicidade.classList = "publicidade";
+            divpublicidade.innerText = "Publicidade 315x80";
+            divpetsnamorando.appendChild(divpublicidade);
+        }
     });
 
     document.getElementById("carregar-mais").classList.remove("loading");

@@ -50,7 +50,17 @@ h3 {
 }
 
 @media (min-width: 961px) {
+    header {
+        height: 216px;
+    }
+
     .casal {
         width: 380px;
+        display: inline-block;
+    }
+
+    .publicidade {
+        width: 750px;
+        height: 100px;
     }
 }

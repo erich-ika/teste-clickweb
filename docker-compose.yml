@@ -1,29 +1,30 @@
 services:
-    laravel.test:
-        build:
-            context: ./vendor/laravel/sail/runtimes/8.2
-            dockerfile: Dockerfile
-            args:
-                WWWGROUP: '${WWWGROUP}'
-        image: sail-8.2/app
-        extra_hosts:
-            - 'host.docker.internal:host-gateway'
-        ports:
-            - '${APP_PORT:-80}:80'
-            - '${VITE_PORT:-5173}:${VITE_PORT:-5173}'
-        environment:
-            WWWUSER: '${WWWUSER}'
-            LARAVEL_SAIL: 1
-            XDEBUG_MODE: '${SAIL_XDEBUG_MODE:-off}'
-            XDEBUG_CONFIG: '${SAIL_XDEBUG_CONFIG:-client_host=host.docker.internal}'
-            IGNITION_LOCAL_SITES_PATH: '${PWD}'
-        volumes:
-            - '.:/var/www/html'
-        networks:
-            - sail
+  app:
+    build:
+      args:
+        user: clickweb-user
+        uid: 1000
+      context: ./
+      dockerfile: Dockerfile
+    image: clickweb-teste
+    container_name: clickweb-teste
+    restart: unless-stopped
+    working_dir: /var/www/
+    volumes:
+      - ./:/var/www
+    networks:
+      - clickweb-net
+  nginx:
+    image: nginx:alpine
+    container_name: clickweb-nginx
+    restart: unless-stopped
+    ports:
+      - 80:80
+    volumes:
+      - ./:/var/www
+      - ./docker-compose/nginx:/etc/nginx/conf.d/:ro
+    networks:
+      - clickweb-net
 networks:
-    sail:
-        driver: bridge
-volumes:
-    sail-mysql:
-        driver: local
+  clickweb-net:
+    driver: bridge
